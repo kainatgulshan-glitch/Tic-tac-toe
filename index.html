@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">Tic <span>Tac</span> Toe</h1>
+
+        <div class="scoreboard">
+            <div class="score-box x-score">
+                <div class="score-label">Player X</div>
+                <div class="score-value" id="scoreX">0</div>
+            </div>
+            <div class="score-box draw-score">
+                <div class="score-label">Draws</div>
+                <div class="score-value" id="scoreDraw">0</div>
+            </div>
+            <div class="score-box o-score">
+                <div class="score-label">Player O</div>
+                <div class="score-value" id="scoreO">0</div>
+            </div>
+        </div>
+
+        <div class="status-box">
+            <p id="status">Player <span id="currentMark" class="x-color">X</span>'s Turn</p>
+        </div>
+
+        <div class="board" id="board">
+            <div class="cell" onclick="play(this)" data-index="0"></div>
+            <div class="cell" onclick="play(this)" data-index="1"></div>
+            <div class="cell" onclick="play(this)" data-index="2"></div>
+            <div class="cell" onclick="play(this)" data-index="3"></div>
+            <div class="cell" onclick="play(this)" data-index="4"></div>
+            <div class="cell" onclick="play(this)" data-index="5"></div>
+            <div class="cell" onclick="play(this)" data-index="6"></div>
+            <div class="cell" onclick="play(this)" data-index="7"></div>
+            <div class="cell" onclick="play(this)" data-index="8"></div>
+        </div>
+
+        <button class="reset-btn" onclick="resetgame()">
+            <span>&#8635;</span> New Game
+        </button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
